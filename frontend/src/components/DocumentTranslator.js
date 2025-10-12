@@ -124,27 +124,212 @@
 
 // export default DocumentTranslator;
 
+// // import React, { useState } from "react";
+// // import axios from "axios";
+// // import { AiOutlineUpload, AiOutlineLoading3Quarters } from "react-icons/ai";
+// // import "./../index.css";
+
+// // function DocumentTranslator(){
+// //   const [file, setFile] = useState(null);
+// //   const [video, setVideo] = useState(null);
+// //   const [sourceLang, setSourceLang] = useState("");
+// //   const [targetLang, setTargetLang] = useState("");
+// //   const [loading, setLoading] = useState(false);
+// //   const [result, setResult] = useState(null);
+// //   const [audioUrl, setAudioUrl] = useState(null);
+// //   const [error, setError] = useState(null);
+
+// //   const handleDocumentUpload = async (e) => {
+// //     e.preventDefault();
+// //     if (!file || !sourceLang || !targetLang) {
+// //       alert("Please select a file and languages!");
+// //       return;
+// //     }
+
+// //     const formData = new FormData();
+// //     formData.append("file", file);
+// //     formData.append("source_lang", sourceLang);
+// //     formData.append("target_lang", targetLang);
+
+// //     try {
+// //       setLoading(true);
+// //       setError(null);
+// //       setResult(null);
+// //       const res = await axios.post(
+// //         "http://127.0.0.1:8000/document/document-translator",
+// //         formData,
+// //         { headers: { "Content-Type": "multipart/form-data" } }
+// //       );
+// //       setResult(res.data.translated_text || res.data.translated_pages?.join("\n\n"));
+// //     } catch (err) {
+// //       setError(err.response?.data?.detail || "Upload failed");
+// //     } finally {
+// //       setLoading(false);
+// //     }
+// //   };
+
+// //   const handleVideoUpload = async () => {
+// //     if (!video || !sourceLang || !targetLang) {
+// //       alert("Please select a video and languages!");
+// //       return;
+// //     }
+
+// //     const formData = new FormData();
+// //     formData.append("video", video);
+// //     formData.append("source_lang", sourceLang);
+// //     formData.append("target_lang", targetLang);
+
+// //     try {
+// //       setLoading(true);
+// //       setError(null);
+// //       setResult(null);
+// //       setAudioUrl(null);
+
+// //       const res = await axios.post(
+// //         "http://127.0.0.1:8000/video/video-translator",
+// //         formData,
+// //         { headers: { "Content-Type": "multipart/form-data" }, responseType: "blob" }
+// //       );
+
+// //       const url = window.URL.createObjectURL(new Blob([res.data], { type: "audio/wav" }));
+// //       setAudioUrl(url);
+// //     } catch (err) {
+// //       setError(err.response?.data?.detail || "Video translation failed");
+// //     } finally {
+// //       setLoading(false);
+// //     }
+// //   };
+
+// //   return (
+// //     <div className="container">
+// //       <h1>🎬 Translator App</h1>
+
+// //       {/* Document Translator */}
+// //       <form onSubmit={handleDocumentUpload}>
+// //         <label>
+// //           📄 Select Document:
+// //           <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+// //         </label>
+
+// //         <label>
+// //           🌐 Source Language:
+// //           <select value={sourceLang} onChange={(e) => setSourceLang(e.target.value)}>
+// //             <option value="">Select</option>
+// //             <option value="english">English</option>
+// //             <option value="hindi">Hindi</option>
+// //             <option value="telugu">Telugu</option>
+// //             <option value="tamil">Tamil</option>
+// //             <option value="bengali">Bengali</option>
+// //           </select><br />
+// //         </label>
+
+// //         <label>
+// //           🎯 Target Language:
+// //           <select value={targetLang} onChange={(e) => setTargetLang(e.target.value)}>
+// //             <option value="">Select</option>
+// //             <option value="hindi">Hindi</option>
+// //             <option value="telugu">Telugu</option>
+// //             <option value="tamil">Tamil</option>
+// //             <option value="bengali">Bengali</option>
+// //             <option value="english">English</option>
+// //           </select>
+// //         </label>
+
+// //         <button type="submit" disabled={loading}>
+// //           {loading ? (
+// //             <>
+// //               <AiOutlineLoading3Quarters className="loading-icon" />
+// //               Processing...
+// //             </>
+// //           ) : (
+// //             "Translate Document"
+// //           )}
+// //         </button>
+// //       </form>
+
+// //       {/* Video Translator */}
+// //       {/* <label>
+// //         🎞️ Select Video:
+// //         <input type="file" accept="video/*" onChange={(e) => setVideo(e.target.files[0])} />
+// //       </label> */}
+
+// //       {/* <label> */}
+// //         {/* 🌐 Source Language:
+// //         <select value={sourceLang} onChange={(e) => setSourceLang(e.target.value)}>
+// //           <option value="">Select</option>
+// //           <option value="english">English</option>
+// //           <option value="hindi">Hindi</option>
+// //           <option value="telugu">Telugu</option>
+// //           <option value="tamil">Tamil</option>
+// //           <option value="bengali">Bengali</option>
+// //         </select>
+// //       </label>
+
+// //       <label>
+// //         🎯 Target Language:
+// //         <select value={targetLang} onChange={(e) => setTargetLang(e.target.value)}>
+// //           <option value="">Select</option>
+// //           <option value="hindi">Hindi</option>
+// //           <option value="telugu">Telugu</option>
+// //           <option value="tamil">Tamil</option>
+// //           <option value="bengali">Bengali</option>
+// //           <option value="english">English</option>
+// //         </select>
+// //       </label> */}
+
+// //       {/* <button onClick={handleVideoUpload} disabled={loading}>
+// //         {loading ? "Processing..." : "Upload & Translate Video"}
+// //       </button> */}
+
+// //       {/* Display error */}
+// //       {/* {error && <p className="text-red-600 mt-4 text-center">{error}</p>} */}
+
+// //       {/* Document Translation Result */}
+// //       {/* {result && (
+// //         <div className="result-box">
+// //           <strong>Translated Text:</strong>
+// //           <p>{result}</p>
+// //         </div>
+// //       )} */}
+
+// //       {/* Video Translation Audio */}
+// //       {/* {audioUrl && (
+// //         <div className="result-box">
+// //           <strong>🔊 Translated Audio:</strong>
+// //           <audio controls src={audioUrl}></audio>
+// //           <br />
+// //           <a href={audioUrl} download="translated_audio.wav" className="download-link">
+// //             ⬇️ Download Audio
+// //           </a>
+// //         </div>
+// //       )} */}
+// //     </div>
+// //   );
+// // }
+
+// // export default DocumentTranslator;
+
+
 import React, { useState } from "react";
-import axios from "axios";
-import { AiOutlineUpload, AiOutlineLoading3Quarters } from "react-icons/ai";
-import "./../index.css";
+import "../index.css";
 
-function TranslatorApp() {
+export default function DocumentTranslator() {
   const [file, setFile] = useState(null);
-  const [video, setVideo] = useState(null);
-  const [sourceLang, setSourceLang] = useState("");
-  const [targetLang, setTargetLang] = useState("");
+  const [sourceLang, setSourceLang] = useState("english");
+  const [targetLang, setTargetLang] = useState("hindi");
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState(null);
-  const [audioUrl, setAudioUrl] = useState(null);
-  const [error, setError] = useState(null);
+  const [result, setResult] = useState("");
+  const [outputFile, setOutputFile] = useState("");
 
-  const handleDocumentUpload = async (e) => {
-    e.preventDefault();
-    if (!file || !sourceLang || !targetLang) {
-      alert("Please select a file and languages!");
+  const handleUpload = async () => {
+    if (!file) {
+      alert("Please select a file!");
       return;
     }
+
+    setLoading(true);
+    setResult("");
+    setOutputFile("");
 
     const formData = new FormData();
     formData.append("file", file);
@@ -152,49 +337,16 @@ function TranslatorApp() {
     formData.append("target_lang", targetLang);
 
     try {
-      setLoading(true);
-      setError(null);
-      setResult(null);
-      const res = await axios.post(
-        "http://127.0.0.1:8000/document/document-translator",
-        formData,
-        { headers: { "Content-Type": "multipart/form-data" } }
-      );
-      setResult(res.data.translated_text || res.data.translated_pages?.join("\n\n"));
+      const res = await fetch("http://127.0.0.1:8000/document/document-translator", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+
+      setResult(data.translated_text || data.translated_pages?.join("\n\n"));
+      if (data.output_file) setOutputFile(data.output_file);
     } catch (err) {
-      setError(err.response?.data?.detail || "Upload failed");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleVideoUpload = async () => {
-    if (!video || !sourceLang || !targetLang) {
-      alert("Please select a video and languages!");
-      return;
-    }
-
-    const formData = new FormData();
-    formData.append("video", video);
-    formData.append("source_lang", sourceLang);
-    formData.append("target_lang", targetLang);
-
-    try {
-      setLoading(true);
-      setError(null);
-      setResult(null);
-      setAudioUrl(null);
-
-      const res = await axios.post(
-        "http://127.0.0.1:8000/video/video-translator",
-        formData,
-        { headers: { "Content-Type": "multipart/form-data" }, responseType: "blob" }
-      );
-
-      const url = window.URL.createObjectURL(new Blob([res.data], { type: "audio/wav" }));
-      setAudioUrl(url);
-    } catch (err) {
-      setError(err.response?.data?.detail || "Video translation failed");
+      setResult("Error: " + err.message);
     } finally {
       setLoading(false);
     }
@@ -202,109 +354,56 @@ function TranslatorApp() {
 
   return (
     <div className="container">
-      <h1>🎬 Translator App</h1>
+      <h1>📄 Document Translation</h1>
 
-      {/* Document Translator */}
-      <form onSubmit={handleDocumentUpload}>
-        <label>
-          📄 Select Document:
-          <input type="file" onChange={(e) => setFile(e.target.files[0])} />
-        </label>
+      <div className="input-group">
+        <label>📂 Select Document:</label>
+        <input type="file" accept=".txt,.pdf,.docx" onChange={(e) => setFile(e.target.files[0])} />
+      </div>
 
-        <label>
-          🌐 Source Language:
-          <select value={sourceLang} onChange={(e) => setSourceLang(e.target.value)}>
-            <option value="">Select</option>
-            <option value="english">English</option>
-            <option value="hindi">Hindi</option>
-            <option value="telugu">Telugu</option>
-            <option value="tamil">Tamil</option>
-            <option value="bengali">Bengali</option>
-          </select><br />
-        </label>
-
-        <label>
-          🎯 Target Language:
-          <select value={targetLang} onChange={(e) => setTargetLang(e.target.value)}>
-            <option value="">Select</option>
-            <option value="hindi">Hindi</option>
-            <option value="telugu">Telugu</option>
-            <option value="tamil">Tamil</option>
-            <option value="bengali">Bengali</option>
-            <option value="english">English</option>
-          </select>
-        </label>
-
-        <button type="submit" disabled={loading}>
-          {loading ? (
-            <>
-              <AiOutlineLoading3Quarters className="loading-icon" />
-              Processing...
-            </>
-          ) : (
-            "Translate Document"
-          )}
-        </button>
-      </form>
-
-      {/* Video Translator */}
-      {/* <label>
-        🎞️ Select Video:
-        <input type="file" accept="video/*" onChange={(e) => setVideo(e.target.files[0])} />
-      </label> */}
-
-      {/* <label> */}
-        {/* 🌐 Source Language:
+      <div className="input-group">
+        <label>🌐 Source Language:</label>
         <select value={sourceLang} onChange={(e) => setSourceLang(e.target.value)}>
-          <option value="">Select</option>
           <option value="english">English</option>
           <option value="hindi">Hindi</option>
           <option value="telugu">Telugu</option>
           <option value="tamil">Tamil</option>
           <option value="bengali">Bengali</option>
         </select>
-      </label>
+      </div>
 
-      <label>
-        🎯 Target Language:
+      <div className="input-group">
+        <label>🎯 Target Language:</label>
         <select value={targetLang} onChange={(e) => setTargetLang(e.target.value)}>
-          <option value="">Select</option>
           <option value="hindi">Hindi</option>
           <option value="telugu">Telugu</option>
           <option value="tamil">Tamil</option>
           <option value="bengali">Bengali</option>
           <option value="english">English</option>
         </select>
-      </label> */}
+      </div>
 
-      {/* <button onClick={handleVideoUpload} disabled={loading}>
-        {loading ? "Processing..." : "Upload & Translate Video"}
-      </button> */}
+      <button onClick={handleUpload} disabled={loading}>
+        {loading ? "Translating..." : "Translate Document"}
+      </button>
 
-      {/* Display error */}
-      {/* {error && <p className="text-red-600 mt-4 text-center">{error}</p>} */}
-
-      {/* Document Translation Result */}
-      {/* {result && (
+      {result && (
         <div className="result-box">
           <strong>Translated Text:</strong>
           <p>{result}</p>
         </div>
-      )} */}
+      )}
 
-      {/* Video Translation Audio */}
-      {/* {audioUrl && (
-        <div className="result-box">
-          <strong>🔊 Translated Audio:</strong>
-          <audio controls src={audioUrl}></audio>
-          <br />
-          <a href={audioUrl} download="translated_audio.wav" className="download-link">
-            ⬇️ Download Audio
-          </a>
-        </div>
-      )} */}
+      {outputFile && (
+        <a
+          href={`http://127.0.0.1:8000/document/download/${outputFile}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="download-btn"
+        >
+          ⬇️ Download Translated File
+        </a>
+      )}
     </div>
   );
 }
-
-export default TranslatorApp;

@@ -109,6 +109,7 @@ import DocumentTranslator from "./components/DocumentTranslator";
 import Conversation from "./components/Conversation";
 import Weather from "./components/Weather";
 import SpeechToSpeech from "./components/SpeechToSpeech";
+import TextToSpeech from "./components/TextToSpeech";
 
 function Home() {
   return (
@@ -119,7 +120,8 @@ function Home() {
       <Link to="/document" className="btn">Go to Document Translator</Link><br /><br />
       <Link to="/conversation" className="btn">Go to Conversation</Link><br /><br />
       <Link to="/weather" className="btn">Go to Weather Report</Link><br /><br />
-      <Link to="/speech" className="btn">Go to Speech-to-Speech</Link>
+      <Link to="/speech" className="btn">Go to Speech-to-Speech</Link><br /><br />
+      {/* <Link to="/tts" className="btn">Go to Text-to-Speech</Link> */}
     </div>
   );
 }
@@ -134,6 +136,7 @@ export default function App() {
         <Route path="/conversation" element={<Conversation />} />
         <Route path="/weather" element={<Weather />} />
         <Route path="/speech" element={<SpeechToSpeech />} />
+        {/* <Route path="/tts" element={<TextToSpeech />} /> */}
       </Routes>
     </Router>
   );
