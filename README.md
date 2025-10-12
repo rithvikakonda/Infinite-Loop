@@ -53,7 +53,7 @@ A **mobile‑responsive web application** that enables seamless **cross‑langua
 
 
 <!-- ![Welcome Page](./page.png) -->
-![Welcome Page](./pageimages/Home.png)
+![Welcome Page](./Home.png)
 
 
 
