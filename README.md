@@ -12,22 +12,39 @@ A **mobile‑responsive web application** that enables seamless **cross‑langua
 
 ## Key Features / Use Cases
 
+
 ### 1. OCR-based Document Translation
 - Scan or upload printed material (e.g., pamphlets, manuals, guidelines with any extension of documents and images(.pdf , .doc,.jpeg,.png etc)).
 - Extracted text is translated and displayed on page into the user’s native language using **Bhashini MT**.
+- Enables farmers to **quickly translate printed materials** such as manuals, pamphlets, and guidelines into their native language.
+- Makes critical agricultural information **accessible and easy to understand**, regardless of literacy or language barriers.
 
 ### 2.  Video → Speech → Text → Native Language Translation
 - Upload or stream agricultural videos.
-- Extract spoken content using **ASR**, convert to text.
-- Translate and render into native language using **MT** and **TTS**.
+- Extract spoken content using **ASR**, convert to text.Translate and render into native language using **MT** and **TTS**.
+ Transforms agricultural videos into **translated, readable, and audible content**.
+- Helps farmers **grasp instructions, demonstrations, or training content** in their preferred language without missing key details.
 
-### 3.  Localized Weather Reports
+
+### 3.  Localized Weather 
+- Provides **real-time, regional weather updates** in local languages.
+- Supports farmers in **making informed decisions** about sowing, irrigation, harvesting, and crop protection.
 - Fetch weather data using location.
-- Translate and voice out reports in regional languages using **MT** and **TTS**.
+
 
 ### 4.  Agriculture Chatbot
-- Conversational AI for FAQs on farming practices, crop info, government schemes, etc.
+- Offers a **conversational AI assistant** for queries about crops, farming practices, and government schemes.
+- Enhances **instant access to guidance**, enabling smarter and faster decision-making in the field.
 - Speech input/output enabled via **ASR** and **TTS** in the user’s preferred language.
+
+
+### 5. Speech-to-Speech Translation
+- Enables seamless **oral communication across languages** for farmers and agricultural workers.
+- Users can speak in one language, and the app instantly **translates and voices the message** in another language.
+- Supports **male and female voices**, making the communication natural and clear.
+- Ideal for conveying **important farming instructions, market updates, or government advisories** in the listener’s preferred language.
+- Helps bridge **language barriers** in rural areas, promoting better understanding and timely action.
+
 
 ---
 
