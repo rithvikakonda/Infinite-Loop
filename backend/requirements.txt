@@ -1,6 +1,6 @@
 # Core FastAPI stack
 fastapi==0.109.2
-uvicorn[standard]==0.23.3
+uvicorn[standard]==0.23.2
 python-multipart==0.0.6
 pydantic==2.6.0
 requests==2.31.0
