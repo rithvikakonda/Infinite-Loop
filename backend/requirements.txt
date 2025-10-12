@@ -1,47 +1,12 @@
-from fastapi import FastAPI, UploadFile, Form, HTTPException
-from fastapi.responses import JSONResponse
-from fastapi.staticfiles import StaticFiles
-from moviepy.editor import VideoFileClip
-from pydub import AudioSegment, silence
-import requests, os, tempfile, io, uuid, json
-import re
-import base64
-from fastapi import FastAPI, UploadFile, Form, HTTPException
-from fastapi.responses import JSONResponse, FileResponse
-from fastapi.middleware.cors import CORSMiddleware
-import os, io, uuid, json, re, subprocess
-from PIL import Image
-from pdf2image import convert_from_path
-import requests
-from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi import FastAPI, File, UploadFile, Form, HTTPException
-from fastapi.responses import JSONResponse, FileResponse
-from fastapi.middleware.cors import CORSMiddleware
-import os
-import base64
-import requests
-from datetime import datetime
-import re
-from groq import Groq
-
-from fastapi import FastAPI, File, UploadFile, Form, HTTPException
-from fastapi.responses import JSONResponse, FileResponse
-from fastapi.middleware.cors import CORSMiddleware
-import os
-import base64
-import requests
-from datetime import datetime
-from groq import Groq
-from typing import Optional
-from fastapi import FastAPI, File, Form, UploadFile, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse, FileResponse
-import requests
-import os
-from datetime import datetime
-import base64
-import tempfile
-from typing import Optional
-from pydantic import BaseModel
-from werkzeug.utils import secure_filename
+fastapi==0.111.2
+uvicorn[standard]==0.23.3
+requests==2.31.0
+pillow==10.0.0
+pdf2image==1.16.3
+moviepy==2.0.0
+pydub==0.25.1
+python-multipart==0.0.6
+groq==0.4.0
+werkzeug==3.1.2
+pydantic==2.6.0
+pytesseract==0.4.3
