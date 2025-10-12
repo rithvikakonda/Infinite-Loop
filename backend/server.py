@@ -7,6 +7,7 @@ from main import app as app_video   # your existing video app
 from coversation import app as app_conversation  # your existing conversation app
 from weather import app as app_weather  # your existing weather app
 from speechTospeech import app as app_speech  # your existing speech-to-speech app
+from textToSpeech import app as app_texttoSpeech  # your existing text-to-speech app
 
 app = FastAPI(title="Unified API Gateway")
 
@@ -24,6 +25,7 @@ app.mount("/translate", app_video)    # accessible at /translate/*
 app.mount("/conversation", app_conversation)  # accessible at /conversation/*
 app.mount("/weather", app_weather)  # accessible at /weather/*
 app.mount("/speech", app_speech)  # accessible at /speech/*
+app.mount("/tts", app_texttoSpeech)  # accessible at /text-to-speech/*
 
 if __name__ == "__main__":
     import uvicorn
