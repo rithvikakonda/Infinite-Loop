@@ -115,7 +115,7 @@ This feature acts as a **digital farming advisor**, helping farmers get instant 
 
 ## Weather Assistant Page
 
-![Weather Assistant Page](./pageimages/weather.png)
+![Weather Assistant Page](./weather.png)
 
 This page helps users get **localized weather updates** in their **preferred language** (Telugu, Hindi, or English), using speech or text input.
 
