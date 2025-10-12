@@ -181,8 +181,7 @@ Coming soon...
 
 ``` bash
 1. Clone the Repository
-
-git clone https://github.com/yourusername/agriculture-multimodal-translator.git
+git clone https://github.com/rithvikakonda/Infinite-Loop.git
 
 2. Create and Activate a Virtual Environment
 
