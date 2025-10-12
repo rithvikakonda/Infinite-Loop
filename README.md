@@ -251,3 +251,6 @@ npm start
 
 ```
 
+### Note
+- Multi-language Support: We have implemented translation for **all languages supported by Bhashini models**, but currently the frontend **displays only 5 selectable languages**.
+
