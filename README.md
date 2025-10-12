@@ -70,7 +70,7 @@ The **Welcome Page** serves as the main entry point for users into the **Agricul
 ##  Video Translation Page
 
 ### Screenshot  
-![Video Translation page](./pageimages/videotranslation.png)
+![Video Translation page](./videotranslation.png)
 
 <!-- ![Welcome Page](./pageimages/Home.png) -->
 The **Video Translation Page**  enables users to **translate agricultural videos** into their preferred languages effortlessly.  
@@ -85,7 +85,7 @@ This feature helps farmers and agricultural workers **understand videos from dif
 ---
 ## Document Translator Page
 
-![Document Translator Page](./pageimages/Document-trans.png)
+![Document Translator Page](./Document-trans.png)
 
 This page allows users to **upload documents** and translate them from one language to another using **Bhashini's Machine Translation (MT)**.
 
@@ -102,7 +102,7 @@ A farmer uploads a document/manual in English and selects Hindi as the target la
 ## Farmer Assistant Page
 
 ### Screenshot  
-![Farmer Assistant](./pageimages/FarmerAssistant.png)
+![Farmer Assistant](./FarmerAssistant.png)
 
 The **Farmer Assistant** page provides a **voice-enabled agricultural chatbot** that supports multiple Indian languages like **Telugu, Hindi, and English**.  
 
@@ -134,7 +134,7 @@ A farmer in Telangana types or speaks a weather-related question in **Telugu**. 
 
 ## Speech-to-Speech Translation Page
 
-![Speech-to-Speech Page](./pageimages/s2s.png)
+![Speech-to-Speech Page](./s2s.png)
 
 This page allows users to **translate speech** from one language to another and **hear it back** in the chosen voice (male or female), using **Bhashini's ASR, MT, and TTS models**.
 
