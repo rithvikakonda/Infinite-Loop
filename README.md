@@ -175,15 +175,54 @@ A farmer speaks in English, and the app translates and speaks back the message i
 
 Coming soon...
 
-## How to Run Code?
+
+### How to Run Code?
+### SetUp Instructions
+
+``` bash
+1. Clone the Repository
+
+git clone https://github.com/yourusername/agriculture-multimodal-translator.git
+
+2. Create and Activate a Virtual Environment
+
+python -m venv venv
+source venv/bin/activate      # On macOS/Linux
+# On Windows:
+venv\Scripts\activate
+#installations
+
+pip install fastapi uvicorn[standard] moviepy pydub requests pillow pdf2image werkzeug groq pydantic
+
+
+3.Run the Backend (FastAPI)
+
+uvicorn main:app --reload
+
+
+4.Run the Frontend (React)
+
+cd frontend
+npm install
+npm start
+
+```
 
 
 
-## Installation Steps  
+### Dependencies
 
+- FastAPI: Web framework
+- Uvicorn: ASGI server
+- MoviePy: Video processing
+- Pydub: Audio processing
+- Requests: HTTP requests
+- Pillow: Image processing
+- pdf2image: PDF to image conversion
+- Werkzeug: Utility functions (secure filenames)
+- Groq: Custom AI model interface
+- Pydantic: Data validation
 
-
-### Getting Started
 
 
 ###
